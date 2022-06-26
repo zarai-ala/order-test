@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello OrderController!
+{% endblock %}
+
+{% block body %}
+
+
+ <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                        <div class="container-fluid">
+                         
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarColor03">
+                            {% if app.user %}
+							
+                            <a class="dropdown-item btn btn-lg btn-primary m-3 d-flex justify-content-end" href="{{ path('app_login')}}">Déconnxion</a>
+                            {% endif %}
+                    
+                    </div>
+                </div>
+                </nav>
+            </div>
+<div class="container">
+	<form class="row g-3 d-flex justify-content-center m-5" method="post">
+  <div class="col-auto  ">
+    <input class="btn btn-primary mb-3" type="submit" value="download"/>
+  </div>		
+</form>
+</div>
+
+{% endblock %}
